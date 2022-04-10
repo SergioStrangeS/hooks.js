@@ -1,37 +1,24 @@
-# ≡ Hooks.js
+# hooks.js
 
-Третья версия [DiscordWebhooks](https://github.com/SergioStrangeS/DiscordWebhooks), разработка идет на языке JavaScript и библиотеке VueJS. \
-За дизайн отвечает [Bootstrap 5 версии](https://getbootstrap.com/docs/5.1/getting-started/introduction/). \
-Главныйм по уведомления можно считать [notyf.js](https://github.com/caroso1222/notyf) \
-Данные получаем с [Kinopoisk Api Unofficial](https://kinopoiskapiunofficial.tech/). \
-Ну а саму отправку организовываем средствами [Discord Вебхуками](https://discord.com/developers/docs/resources/webhook) 
+## Project setup
+```
+npm install
+```
 
-![alt text](C:\Users\Sergios\Desktop\hooks.js\src\main.png)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-***
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Отличия от прежних версий:
+### Lints and fixes files
+```
+npm run lint
+```
 
-* Динамическое изменение прямо на странице
-* Бесплатный хостинг от GitPages
-* Используется хоть и не официальное, но все-же API, для поиска фильмов с Kinopoisk
-* Доступ с любого устройства (Кроссплатформенность)
-* Ключи авторизации хранятся в локальных файлах браузера
-* Присутствуют уведомления об ошибках
-* Всегда актуальная версия (Нет необходимости в обновлениях)
-
-
-<!-- добавить кнопку, сбросить локальные данные (Сбросить до настроек по умолчанию) -->
-<!-- Переписать информацию на главной -->
-<!-- Сделать посты по умолчанию для пользователей без токена -->
-<!-- Переписать UserHistory -->
-<!-- При закрытии модального окна, закрывать фрейм -->
-<!-- Переписать на новую версию API -->
-<!-- Исправить длительность фильма -->
-<!-- Истправить отображение ошибок в API КП -->
-
-[comment]: <> (АНИМАЦИИ!)
-
-[comment]: <> (Работа с файлами JS)
-
-[comment]: <> (Переписать страницу с фильмом &#40;Single page&#41;)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
