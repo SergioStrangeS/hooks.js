@@ -1,30 +1,62 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <!--  <nav>-->
+  <!--    <router-link to="/">Home</router-link> |-->
+  <!--    <router-link to="/about">About</router-link>-->
+  <!--  </nav>-->
+
+  <NavbarMenu
+    :localdata="localdata"
+    @isDarkTheme="DarkTheme"
+  />
+
+  <section class="min-vh-100" :class="localdata.darkTheme ? 'bg-dark text-light' : null">
+      <router-view :localdata="localdata"/>
+  </section>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style scoped>
+  .main-enter-active,
+  .main-leave-active {
+    transition: .5s;
+  }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .main-enter,
+  .main-leave-to {
+    opacity: 0;
+  }
 </style>
+
+<script lang="ts">
+import NavbarMenu from '@/components/NavbarMenu.vue'
+
+export default {
+  components: {
+    NavbarMenu
+  },
+  data () {
+    return {
+      localdata: {
+        Kinopoisk: {
+          item: null,
+          show: false
+        },
+        Discord: {
+          item: null,
+          show: false
+        },
+        Together: null,
+        darkTheme: null,
+        historyItems: [],
+        agree: false
+      },
+      url: ''
+    }
+  },
+  methods: {
+    DarkTheme: function (isDark) {
+      console.log(isDark)
+      this.localdata.darkTheme = isDark
+    }
+  }
+}
+</script>
